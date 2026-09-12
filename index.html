@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MemeyAI</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="index.js "></script>
+</head>
+<body>
+    <header class="site-header">
+        <div class="top-bar header-container">
+            <div class="top-bar-section">
+                <a href="tel:0794153677">
+                    <!-- SVG Phone Icon -->
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/></svg>
+                    <span class="contact-info__text">0794153677</span>
+                </a>
+                <a href="Relations@memeyai.com">
+                    <!-- SVG Mail Icon -->
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" /></svg>
+                    <span class="contact-info__text">Relations@memeyai.com</span>
+                </a>
+            </div>
+            <div class="top-bar-section social-links">
+                <!-- Example of accessible social link where text is replaced by an icon -->
+                <a href="#" aria-label="Our LinkedIn Profile">
+                    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19M18.5,18.5V13.2A3.26,3.26 0 0,0 15.24,9.94C14.39,9.94 13.5,10.43 13,11.1V10.13H10.13V18.5H13V13.57C13,12.8 13.12,12.04 14.14,12.04C15.16,12.04 15.24,12.95 15.24,13.66V18.5H18.5M6.88,8.56A1.68,1.68 0 0,0 8.56,6.88C8.56,6 8,5.44 7.22,5.44C6.44,5.44 5.88,6 5.88,6.88A1.68,1.68 0 0,0 6.88,8.56M8.13,18.5V10.13H5.63V18.5H8.13Z"/></svg>
+                </a>
+                <a href="#" aria-label="Our Twitter Profile">
+                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.65,4 11.73,5.92 11.73,8.29C11.73,8.63 11.77,8.96 11.84,9.27C8.28,9.09 5.11,7.38 3,4.79C2.63,5.42 2.42,6.16 2.42,6.94C2.42,8.43 3.17,9.75 4.33,10.5C3.62,10.5 2.96,10.3 2.38,10C2.38,10 2.38,10 2.38,10.03C2.38,12.11 3.86,13.85 5.82,14.24C5.46,14.34 5.08,14.39 4.69,14.39C4.42,14.39 4.15,14.36 3.89,14.31C4.43,16 6,17.26 7.89,17.29C6.43,18.45 4.58,19.13 2.56,19.13C2.22,19.13 1.88,19.11 1.54,19.07C3.44,20.29 5.7,21 8.12,21C16,21 20.33,14.46 20.33,8.79C20.33,8.6 20.33,8.42 20.32,8.23C21.16,7.63 21.88,6.87 22.46,6Z"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="main-navbar header-container">
+            <a href="#" class="main-navbar__brand" aria-label="Homepage">MemeyAI</a>
+            
+            <button class="main-navbar__toggle" 
+                    id="navbarToggle" 
+                    aria-label="Toggle navigation" 
+                    aria-controls="navbarMenu" 
+                    aria-expanded="false">
+                <span class="bar"></span><span class="bar"></span><span class="bar"></span>
+            </button>
+            
+            <nav id="navbarMenu" class="main-navbar__menu" role="navigation" aria-labelledby="navbarToggle">
+                <ul class="main-navbar__list">
+                    <li class="main-navbar__item"><a href="#" class="main-navbar__link">Home</a></li>
+                    
+                    <li class="main-navbar__item dropdown">
+                        <a href="#" class="main-navbar__link" 
+                           id="services-dropdown"
+                           role="button" 
+                           aria-haspopup="true" 
+                           aria-expanded="false">Services</a>
+                        <ul class="dropdown-menu" aria-labelledby="services-dropdown">
+                            <li><a href="#">Web Development</a></li>
+                            <li><a href="#">Digital Marketing</a></li>
+                            <li><a href="#">Cloud Solutions</a></li>
+                            <li><a href="#">Consulting</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="main-navbar__item"><a href="#" class="main-navbar__link">About Us</a></li>
+                    <li class="main-navbar__item"><a href="#" class="main-navbar__link">Blog</a></li>
+                    <li class="main-navbar__item main-navbar__item--cta">
+                        <a href="#" class="main-navbar__link main-navbar__link--cta">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="carousel-hero">
+        <div class="carousel-hero-container" role="region" aria-roledescription="carousel" aria-label="Featured Projects">
+    
+            <div class="carousel-track-container">
+                <div class="carousel-track">
+                    <!-- Slide 1 -->
+                    <div class="carousel-slide" 
+                         role="group" 
+                         aria-roledescription="slide"
+                         aria-label="1 of 3"
+                         style="background-image:url('https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=1200')">
+                        <div class="slide-content">
+                            <h2>MemeyAI Digital Solutions</h2>
+                            <p>BUILD SMARTER. SCALE FASTER. WIN TOGETHER.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 2 -->
+                    <div class="carousel-slide"
+                         role="group" 
+                         aria-roledescription="slide"
+                         aria-label="2 of 3"
+                         style="background-image:url('https://images.unsplash.com/photo-1542744095-291d1f67b221?q=80&w=1200')">
+                        <div class="slide-content">
+                            <h2>Aura Health: Mobile Wellness App</h2>
+                            <p>An intuitive mobile app designed for tracking fitness and mental wellbeing.</p>
+                        </div>
+                    </div>
+                    <!-- Slide 3 -->
+                    <div class="carousel-slide"
+                         role="group" 
+                         aria-roledescription="slide"
+                         aria-label="3 of 3"
+                         style="background-image:url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1200')">
+                        <div class="slide-content">
+                            <h2>Nomad Creative: Brand Website</h2>
+                            <p>A portfolio website for a digital creative agency focused on user engagement.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+            <button class="carousel-button prev" aria-label="Previous slide">
+                <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 18L9 12L15 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+            <button class="carousel-button next" aria-label="Next slide">
+                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18L15 12L9 6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            </button>
+    
+            <div class="carousel-nav" aria-label="Slide navigation">
+                <!-- Dots will be generated by JavaScript -->
+            </div>
+    
+        </div>
+
+        <section class="logo-carousel-hero">
+            <div class="logo-carousel-hero-content">
+                <h1 class="title">TRUSTED BY KENYA`S LEADING BRANDS & PARTNERS</h1>
+                <!-- <p class="subtitle">From Fortune 500s to disruptive startups, our platform provides the tools and insights needed to stay ahead in a competitive market.</p>  -->
+            </div>
+        
+            <div class="logo-carousel">
+                <div class="logo-carousel-slider">
+                    <!-- First set of logos -->
+                    <div class="logo-carousel-list">
+                        <img src="https://plus.unsplash.com/premium_photo-1709399200520-89f2f5d46dbd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8M2QlMjBpY29ufGVufDB8fDB8fHww" alt="QuantumLeap logo" class="logo-item">
+                        <img src="https://images.unsplash.com/photo-1563694983011-6f4d90358083?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bG9nb3N8ZW58MHx8MHx8fDA%3D" alt="Stellar & Co logo" class="logo-item">
+                        <img src="https://i.pinimg.com/736x/39/3b/b1/393bb1bb15940aea508dd07c5da23917.jpg" alt="Vertex Inc logo" class="logo-item">
+                        <img src="https://images.unsplash.com/photo-1748326650737-33500fdfda30?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fGxvZ28lMjBkZXNpZ258ZW58MHx8MHx8fDA%3D" alt="Apex Digital logo" class="logo-item">
+                        <img src="https://images.unsplash.com/photo-1662070479020-73f77887c87c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bG9nb3N8ZW58MHx8MHx8fDA%3D" alt="Pioneer Group logo" class="logo-item">
+                        <img src="https://i.pinimg.com/1200x/c3/9b/c1/c39bc1b9ac654fb2d0eaa998ffbb1192.jpg" alt="Zenith Corp logo" class="logo-item">
+                    </div>
+                    <!-- Second, identical set of logos for seamless loop -->
+                    <div class="logo-carousel-list">
+                        <img src="https://plus.unsplash.com/premium_photo-1709399200520-89f2f5d46dbd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8M2QlMjBpY29ufGVufDB8fDB8fHww" alt="QuantumLeap logo" class="logo-item">
+                        <img src="https://images.unsplash.com/photo-1563694983011-6f4d90358083?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8bG9nb3N8ZW58MHx8MHx8fDA%3D" alt="Stellar & Co logo" class="logo-item">
+                        <img src="https://i.pinimg.com/736x/39/3b/b1/393bb1bb15940aea508dd07c5da23917.jpg" alt="Vertex Inc logo" class="logo-item">
+                        <img src="https://images.unsplash.com/photo-1748326650737-33500fdfda30?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzF8fGxvZ28lMjBkZXNpZ258ZW58MHx8MHx8fDA%3D" alt="Apex Digital logo" class="logo-item">
+                        <img src="https://images.unsplash.com/photo-1662070479020-73f77887c87c?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8bG9nb3N8ZW58MHx8MHx8fDA%3D" alt="Pioneer Group logo" class="logo-item">
+                        <img src="https://i.pinimg.com/1200x/c3/9b/c1/c39bc1b9ac654fb2d0eaa998ffbb1192.jpg" alt="Zenith Corp logo" class="logo-item">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </section>
+       <div class="events">
+    
+        <img src="Photos/d2.jpg" alt="">
+
+        <div class="eveContent">
+            <h1>STAFF ENGAGEMENT</h1>
+            <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br> Atque praesentium error iure placeat, beatae consequatur ducimus quidem facere vero voluptatum aspernatur. Nam possimus iste dignissimos a placeat ullam totam ipsum!</P>
+           </div>
+       </div>
+
+       <div class="events">
+        <div class="eveContent">
+            <h1>STAFF ENGAGEMENT</h1>
+            <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br> Atque praesentium error iure placeat, beatae consequatur ducimus quidem facere vero voluptatum aspernatur. Nam possimus iste dignissimos a placeat ullam totam ipsum!</P>
+           </div>
+        <img src="Photos/d3.jpg" alt="">
+        
+
+       </div>
+
+       <div class="events">
+        <img src="Photos/d4.jpg" alt="">
+
+       <div class="eveContent">
+        <h1>STAFF ENGAGEMENT</h1>
+        <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br> Atque praesentium error iure placeat, beatae consequatur ducimus quidem facere vero voluptatum aspernatur. Nam possimus iste dignissimos a placeat ullam totam ipsum!</P>
+       </div>
+       
+       </div>
+
+       <div class="events">
+        <div class="eveContent">
+            <h1>STAFF ENGAGEMENT</h1>
+            <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br> Atque praesentium error iure placeat, beatae consequatur ducimus quidem facere vero voluptatum aspernatur. Nam possimus iste dignissimos a placeat ullam totam ipsum!</P>
+           </div>
+        
+        <img src="Photos/dowload1.jpg" alt="">
+        
+
+       </div>
+
+       <section class="leadgen-hero">
+        <div class="leadgen-hero-container">
+    
+            <div class="leadgen-hero-content">
+                <h1 class="title">Unlock Your Business's Full Potential</h1>
+                <p class="subtitle">Get a personalized demo of our all-in-one growth platform and see how we can help you streamline operations, boost sales, and delight customers.</p>
+            </div>
+    
+            <div class="leadgen-hero-form-wrapper">
+                <!-- IMPORTANT: Update the 'action' attribute to your form processing endpoint -->
+                <form class="leadgen-hero-form" action="#" method="POST">
+                    <h2 class="form-title">Request a Free Demo</h2>
+                    <div class="form-group">
+                        <label for="leadgen-name" class="sr-only">Full Name</label>
+                        <input type="text" id="leadgen-name" name="name" class="form-input" placeholder="Full Name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="leadgen-email" class="sr-only">Work Email</label>
+                        <input type="email" id="leadgen-email" name="email" class="form-input" placeholder="Work Email" required>
+                    </div>
+                    <button type="submit" class="form-button">Get My Demo</button>
+                    <p class="form-footer">No credit card required. No spam.</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+       <div class="events">
+        <img src="Photos/download.jfif" width="550px" height="400px" alt="">
+
+        <div class="eveContent">
+        <h1>STAFF ENGAGEMENT</h1>
+        <P>Lorem ipsum dolor sit amet consectetur, adipisicing elit.<br> Atque praesentium error iure placeat, beatae consequatur ducimus quidem facere vero voluptatum aspernatur. Nam possimus iste dignissimos a placeat ullam totam ipsum!</P>
+       </div>
+
+       </div>
+
+       <section class="testimonial-wall-hero">
+
+        <div class="testimonial-grid" aria-hidden="true">
+            <!-- Using placeholders for reliability. Replace with real user photos. -->
+            <div class="testimonial-card">
+                <figure><img src="https://placehold.co/40x40/f87171/ffffff?text=S" alt=""><figcaption>Sarah J.</figcaption></figure>
+                <blockquote>"Completely changed our workflow for the better."</blockquote>
+            </div>
+            <div class="testimonial-card">
+                <figure><img src="https://placehold.co/40x40/fb923c/ffffff?text=M" alt=""><figcaption>Mike T.</figcaption></figure>
+                <blockquote>"The support team is incredible. Fast and super helpful."</blockquote>
+            </div>
+            <div class="testimonial-card">
+                <figure><img src="https://placehold.co/40x40/fbbf24/ffffff?text=A" alt=""><figcaption>Anna L.</figcaption></figure>
+                <blockquote>"I can't imagine running my business without this now."</blockquote>
+            </div>
+            <div class="testimonial-card">
+                <figure><img src="https://placehold.co/40x40/a3e635/ffffff?text=D" alt=""><figcaption>David P.</figcaption></figure>
+                <blockquote>"Finally, a tool that does exactly what it promises."</blockquote>
+            </div>
+            <div class="testimonial-card">
+                <figure><img src="https://placehold.co/40x40/4ade80/ffffff?text=E" alt=""><figcaption>Emily R.</figcaption></figure>
+                <blockquote>"A must-have for any serious professional in this space."</blockquote>
+            </div>
+             <div class="testimonial-card">
+                <figure><img src="https://placehold.co/40x40/34d399/ffffff?text=C" alt=""><figcaption>Chen W.</figcaption></figure>
+                <blockquote>"The best investment we've made all year."</blockquote>
+            </div>
+            <div class="testimonial-card">
+                <figure><img src="https://placehold.co/40x40/22d3ee/ffffff?text=T" alt=""><figcaption>Tom B.</figcaption></figure>
+                <blockquote>"Intuitive, powerful, and reliable."</blockquote>
+            </div>
+             <div class="testimonial-card">
+                <figure><img src="https://placehold.co/40x40/60a5fa/ffffff?text=I" alt=""><figcaption>Isla M.</figcaption></figure>
+                <blockquote>"Our productivity has increased by over 40%!"</blockquote>
+            </div>
+        </div>
+        
+        <div class="hero-content-overlay">
+            <h1 class="title">Join Thousands of Thriving Businesses</h1>
+            <p class="subtitle">See why teams at top companies are choosing our platform to drive growth, efficiency, and collaboration.</p>
+            <a href="#" role="button" class="cta">Start Your Free Trial</a>
+        </div>
+    
+    </section>
+
+       <section class="testimonial-snippet-hero">
+        <div class="testimonial-snippet-hero-content">
+    
+            <div class="testimonial-block">
+                <blockquote class="testimonial-quote">
+                    <p>This is the first platform that has actually saved us time and money. The integration was seamless, and the impact was immediate.</p>
+                </blockquote>
+                <cite class="testimonial-cite">â€” Dr. Kaelen Wren, CEO at Nexus Innovations</cite>
+            </div>
+    
+            <h1 class="main-headline">The All-in-One Solution Your Business is Waiting For</h1>
+    
+            <a href="#" role="button" class="main-cta">Discover Our Features</a>
+    
+        </div>
+    </section>
+
+       <!-- WhatsApp Floating Button HTML -->
+
+<div id="whatsapp-button">
+
+    <a href="https://api.whatsapp.com/send?phone=254721609029" target="_blank">
+  
+        <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp" />
+  
+    </a>
+  
+  </div>
+
+       <footer class="footer-saas" role="contentinfo">
+
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.9275846176474!2d36.873444674080275!3d-1.2107196355463352!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f3f00260b1fe3%3A0x574414b95f8b38ab!2sThome%20Square!5e0!3m2!1sen!2ske!4v1789111117353!5m2!1sen!2ske" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        <div class="container">
+            <div class="footer-saas__main">
+                <div class="footer-saas__links">
+                    <h3 class="footer-saas__heading">Products</h3>
+                    <ul>
+                        <li><a href="https://memeyai.com/">MemeyAI</a></li>
+                        <li><a href="https://nomosai.memeyai.com/">NomosAI</a></li>
+                        <li><a href="https://biashara.memeyai.com/">Mtaani Biz<br> Network</a></li>
+                        <li><a href="https://shule.memeyai.com/">ShuleAI Plus</a></li>
+                        <li><a href="https://pos.kaziflex.com/">UzaPap POS</a></li>
+                        <li><a href="https://arbantv.memeyai.com/">ArbanTV</a></li>
+                        <li><a href="https://pos.kaziflex.com/">DawaTrack</a></li>
+                        <li><a href="https://agrivate.memeyai.com/">Agrivate</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-saas__links">
+                    <h3 class="footer-saas__heading">Resources</h3>
+                    <ul>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Help Center</a></li>
+                        <li><a href="#">Case Studies</a></li>
+                        <li><a href="#">Webinars</a></li>
+                        <li><a href="#">Community</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-saas__links">
+                    <h3 class="footer-saas__heading">Company</h3>
+                    <ul>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="https://business.memeyai.com/#">Careers</a></li>
+                        <li><a href="tel:+254794153677">Call Center</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                        <li><a href="https://www.mchanga.africa/fundraiser/121056">Donate</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-saas__links">
+                    <h3 class="footer-saas__heading">Services</h3>
+                    <ul>
+                        <li><a href="#">Digital Marketing</a></li>
+                        <li><a href="#">Social Media Mgmt</a></li>
+                        <li><a href="#">Ground Activation</a></li>
+                        <li><a href="#">Custom Software</a></li>
+                        <li><a href="#">Gamified Marketing</a></li>
+                        <li><a href="#">ArbanStream</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="footer-saas__bottom">
+                <p class="footer-saas__copyright">&copy; 2025 MemeyAI Digital Solotions.</p>
+                <div class="footer-saas__app-badges">
+                    <a href="#" aria-label="Download on the App Store">
+                        <svg width="135" height="40" viewBox="0 0 135 40" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="135" height="40" rx="8" fill="var(--app-badge-bg)"/>
+                            <g fill="var(--app-badge-text)">
+                                <!-- App Store Badge Placeholder -->
+                                <circle cx="24" cy="20" r="10" />
+                                <text x="45" y="17" font-size="10">Download on the</text>
+                                <text x="45" y="33" font-size="14" font-weight="bold">App Store</text>
+                            </g>
+                        </svg>
+                    </a>
+                    <a href="#" aria-label="Get it on Google Play">
+                        <svg width="135" height="40" viewBox="0 0 135 40" xmlns="http://www.w3.org/2000/svg">
+                            <rect width="135" height="40" rx="8" fill="var(--app-badge-bg)"/>
+                            <g fill="var(--app-badge-text)">
+                                <!-- Google Play Badge Placeholder -->
+                                <polygon points="18,10 34,20 18,30"/>
+                                <text x="45" y="17" font-size="10">GET IT ON</text>
+                                <text x="45" y="33" font-size="14" font-weight="bold">Google Play</text>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        (function(){
+            const carouselContainer = document.querySelector('.carousel-hero-container');
+            if (!carouselContainer) return;
+        
+            const track = carouselContainer.querySelector('.carousel-track');
+            const slides = Array.from(track.children);
+            const nextButton = carouselContainer.querySelector('.carousel-button.next');
+            const prevButton = carouselContainer.querySelector('.carousel-button.prev');
+            const nav = carouselContainer.querySelector('.carousel-nav');
+            
+            // Create nav dots
+            slides.forEach((slide, i) => {
+                const dot = document.createElement('button');
+                dot.classList.add('carousel-dot');
+                dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+                if (i === 0) dot.classList.add('active');
+                nav.appendChild(dot);
+                
+                dot.addEventListener('click', e => {
+                    const currentSlide = track.querySelector('.is-selected');
+                    const currentIndex = slides.findIndex(slide => slide === currentSlide);
+                    moveToSlide(currentIndex, i);
+                });
+            });
+        
+            const dots = Array.from(nav.children);
+            const slideWidth = slides[0].getBoundingClientRect().width;
+        
+            const setSlidePosition = (slide, index) => {
+                slide.style.left = slideWidth * index + 'px';
+            };
+            // Initially arrange slides side-by-side, but this is handled by Flexbox
+            // slides.forEach(setSlidePosition);
+        
+            // Initial setup
+            slides[0].classList.add('is-selected');
+        
+            const moveToSlide = (current, target) => {
+                const targetSlide = slides[target];
+                const currentSlide = slides[current];
+                
+                track.style.transform = `translateX(-${targetSlide.style.left || (target * slideWidth)}px)`;
+                currentSlide.classList.remove('is-selected');
+                targetSlide.classList.add('is-selected');
+        
+                const currentDot = nav.querySelector('.active');
+                currentDot.classList.remove('active');
+                dots[target].classList.add('active');
+        
+                // Show/hide prev/next buttons at ends
+                if (target === 0) {
+                    prevButton.style.display = 'none';
+                    nextButton.style.display = 'block';
+                } else if (target === slides.length - 1) {
+                    prevButton.style.display = 'block';
+                    nextButton.style.display = 'none';
+                } else {
+                    prevButton.style.display = 'block';
+                    nextButton.style.display = 'block';
+                }
+            };
+            
+            // Initial button state
+            prevButton.style.display = 'none';
+            
+            prevButton.addEventListener('click', e => {
+                const currentSlide = track.querySelector('.is-selected');
+                const currentIndex = slides.findIndex(slide => slide === currentSlide);
+                const prevIndex = currentIndex - 1;
+                moveToSlide(currentIndex, prevIndex);
+            });
+            
+            nextButton.addEventListener('click', e => {
+                const currentSlide = track.querySelector('.is-selected');
+                const currentIndex = slides.findIndex(slide => slide === currentSlide);
+                const nextIndex = currentIndex + 1;
+                moveToSlide(currentIndex, nextIndex);
+            });
+        
+            // Recalculate width on resize to be robust
+            window.addEventListener('resize', () => {
+                const currentSlide = track.querySelector('.is-selected');
+                const currentIndex = slides.findIndex(slide => slide === currentSlide);
+                const newSlideWidth = slides[0].getBoundingClientRect().width;
+                track.style.transition = 'none'; // Disable transition for instant adjustment
+                track.style.transform = `translateX(-${currentIndex * newSlideWidth}px)`;
+                setTimeout(() => {
+                    track.style.transition = 'transform 0.5s ease-in-out';
+                }, 10);
+            });
+        
+        })();
+        
+        </script>
+
+    </body>
+</html>
