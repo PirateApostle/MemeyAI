@@ -54,14 +54,16 @@
                            aria-haspopup="true" 
                            aria-expanded="false">Services</a>
                         <ul class="dropdown-menu" aria-labelledby="services-dropdown">
-                            <li><a href="#">Web Development</a></li>
                             <li><a href="#">Digital Marketing</a></li>
-                            <li><a href="#">Cloud Solutions</a></li>
-                            <li><a href="#">Consulting</a></li>
+                            <li><a href="#">Social Media Management</a></li>
+                            <li><a href="#">Ground Activation</a></li>
+                            <li><a href="#">Custom Software</a></li>
+                            <li><a href="#">Gamified Marketing</a></li>
+                            <li><a href="#">ArbanStream</a></li>
                         </ul>
                     </li>
 
-                    <li class="main-navbar__item"><a href="#" class="main-navbar__link">About Us</a></li>
+                    <li class="main-navbar__item"><a href="https://business.memeyai.com/#about" class="main-navbar__link">About Us</a></li>
                     <li class="main-navbar__item"><a href="#" class="main-navbar__link">Blog</a></li>
                     <li class="main-navbar__item main-navbar__item--cta">
                         <a href="#" class="main-navbar__link main-navbar__link--cta">Contact Us</a>
@@ -225,7 +227,7 @@
     </section>
 
        <div class="events">
-        <img src="Photos/download.jfif" width="550px" height="400px" alt="">
+        <img src="https://i.pinimg.com/736x/39/3b/b1/393bb1bb15940aea508dd07c5da23917.jpg" alt="">
 
         <div class="eveContent">
         <h1>STAFF ENGAGEMENT</h1>
@@ -234,10 +236,12 @@
 
        </div>
 
+       <!-- 
+
        <section class="testimonial-wall-hero">
 
         <div class="testimonial-grid" aria-hidden="true">
-            <!-- Using placeholders for reliability. Replace with real user photos. -->
+            <!-- Using placeholders for reliability. Replace with real user photos. 
             <div class="testimonial-card">
                 <figure><img src="https://placehold.co/40x40/f87171/ffffff?text=S" alt=""><figcaption>Sarah J.</figcaption></figure>
                 <blockquote>"Completely changed our workflow for the better."</blockquote>
@@ -279,6 +283,8 @@
         </div>
     
     </section>
+    
+-->
 
        <section class="testimonial-snippet-hero">
         <div class="testimonial-snippet-hero-content">
@@ -296,6 +302,8 @@
     
         </div>
     </section>
+
+
 
        <!-- WhatsApp Floating Button HTML -->
 
@@ -486,6 +494,55 @@
             });
         
         })();
+
+
+        document.addEventListener('DOMContentLoaded', function () {
+    // --- Mobile Menu Toggle ---
+    const navbarToggle = document.getElementById('navbarToggle');
+    const navbarMenu = document.getElementById('navbarMenu');
+
+    if (navbarToggle && navbarMenu) {
+        navbarToggle.addEventListener('click', function () {
+            navbarToggle.classList.toggle('is-active');
+            navbarMenu.classList.toggle('is-active');
+
+            const isExpanded = navbarToggle.getAttribute('aria-expanded') === 'true';
+            navbarToggle.setAttribute('aria-expanded', !isExpanded);
+        });
+    }
+    
+    // --- Accessible Dropdown Toggle ---
+    // This script ensures dropdowns are accessible, especially on mobile
+    // where hover is not an option. It also manages ARIA attributes.
+    const dropdowns = document.querySelectorAll('.dropdown > .main-navbar__link');
+
+    dropdowns.forEach(function(dropdownToggle) {
+        // Check if the dropdown is a link that should not navigate on first click
+        // For this example, the main 'Services' link is just a toggle, not a destination page
+        dropdownToggle.addEventListener('click', function(event) {
+            // Prevent navigation if it's just for opening the dropdown
+            event.preventDefault();
+            
+            const parentDropdown = dropdownToggle.parentElement;
+            parentDropdown.classList.toggle('is-active');
+
+            const isExpanded = dropdownToggle.getAttribute('aria-expanded') === 'true';
+            dropdownToggle.setAttribute('aria-expanded', !isExpanded);
+        });
+    });
+
+    // Optional: Close dropdowns if user clicks outside of them
+    document.addEventListener('click', function(event) {
+        const openDropdown = document.querySelector('.dropdown.is-active');
+        if (openDropdown && !openDropdown.contains(event.target)) {
+            openDropdown.classList.remove('is-active');
+            const toggle = openDropdown.querySelector('[aria-expanded="true"]');
+            if (toggle) {
+                toggle.setAttribute('aria-expanded', 'false');
+            }
+        }
+    });
+});
         
         </script>
 

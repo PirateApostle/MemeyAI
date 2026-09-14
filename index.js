@@ -1,3 +1,5 @@
+
+/*
 document.addEventListener('DOMContentLoaded', function () {
     // --- Mobile Menu Toggle ---
     const navbarToggle = document.getElementById('navbarToggle');
@@ -140,3 +142,5 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 })();
+
+*/

@@ -284,7 +284,6 @@ Header, Top Bar, and Navbar Structure
     position: sticky; top: 0; 
     background-color: rgb(30, 59, 122);
     z-index: 1000;
-    color: rgb(209, 41, 41);
 }
 .header-container {
     width: 100%; max-width: var(--container-width); margin: 0 auto;
@@ -341,6 +340,7 @@ Mobile Menu and Dropdown
     display: none; position: absolute; top: 100%; left: 0; width: 100%;
     background-color: var(--color-background); border-bottom: 1px solid var(--color-border);
     box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    color: whitesmoke;
 }
 .main-navbar__menu.is-active { display: block; }
 .main-navbar__item { border-top: 1px solid var(--color-border); }
