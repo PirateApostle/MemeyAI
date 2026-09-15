@@ -422,6 +422,16 @@ Desktop Navbar Styles (Responsive)
     padding: 20px;
 }
 
+.eveImage {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: 20px;
+    box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+    height: 400px;
+    width: 600px;
+}
+
 .eveContent {
     display: block;
     text-align: center;
@@ -443,6 +453,7 @@ Desktop Navbar Styles (Responsive)
         justify-content: space-evenly;
         align-items: center;
         display: flex;
+        width: 100%;
 
     .footer-saas__main {
         display: grid;
