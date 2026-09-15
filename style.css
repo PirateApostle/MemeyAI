@@ -166,7 +166,7 @@
 }
 .carousel-hero .carousel-slide {
     flex: 0 0 100%;
-    min-height: 530px;
+    min-height: 532px;
     width: 100%;
     position: relative;
     display: flex;
@@ -414,11 +414,12 @@ Desktop Navbar Styles (Responsive)
 .events {
     border: none;
     text-align: center;
-    display: flex;
+    display: block;
     justify-content: space-between;
     box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
     margin: 29px;
-    height: 500px;
+    height: 600px;
+    padding: 20px;
 }
 
 .eveContent {
