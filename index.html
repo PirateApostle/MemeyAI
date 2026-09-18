@@ -16,7 +16,7 @@
                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6.62,10.79C8.06,13.62 10.38,15.94 13.21,17.38L15.41,15.18C15.69,14.9 16.08,14.82 16.43,14.93C17.55,15.3 18.75,15.5 20,15.5A1,1 0 0,1 21,16.5V20A1,1 0 0,1 20,21A17,17 0 0,1 3,4A1,1 0 0,1 4,3H7.5A1,1 0 0,1 8.5,4C8.5,5.25 8.7,6.45 9.07,7.57C9.18,7.92 9.1,8.31 8.82,8.59L6.62,10.79Z"/></svg>
                     <span class="contact-info__text">0794153677</span>
                 </a>
-                <a href="Relations@memeyai.com">
+               <a href="mailto:Relations@memeyai.com">
                     <!-- SVG Mail Icon -->
                     <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20,8L12,13L4,8V6L12,11L20,6M20,4H4C2.89,4 2,4.89 2,6V18A2,2 0 0,0 4,20H20A2,2 0 0,0 22,18V6C22,4.89 21.1,4 20,4Z" /></svg>
                     <span class="contact-info__text">Relations@memeyai.com</span>
@@ -45,35 +45,49 @@
             
             <nav id="navbarMenu" class="main-navbar__menu" role="navigation" aria-labelledby="navbarToggle">
                 <ul class="main-navbar__list">
-                    <li class="main-navbar__item"><a href="#" class="main-navbar__link">Home</a></li>
-                    
-                    <li class="main-navbar__item dropdown">
-                        <a href="#" class="main-navbar__link" 
-                           id="services-dropdown"
-                           role="button" 
-                           aria-haspopup="true" 
-                           aria-expanded="false">Services</a>
-                        <ul class="dropdown-menu" aria-labelledby="services-dropdown">
-                            <li><a href="#">Digital Marketing</a></li>
-                            <li><a href="#">Social Media Management</a></li>
-                            <li><a href="#">Ground Activation</a></li>
-                            <li><a href="#">Custom Software</a></li>
-                            <li><a href="#">Gamified Marketing</a></li>
-                            <li><a href="#">ArbanStream</a></li>
-                        </ul>
-                    </li>
 
-                    <li class="main-navbar__item"><a href="https://business.memeyai.com/#about" class="main-navbar__link">About Us</a></li>
-                    <li class="main-navbar__item"><a href="#" class="main-navbar__link">Contact</li>
-                    <li class="main-navbar__item main-navbar__item--cta">
-                        <a href="https://business.memeyai.com/#contact" class="main-navbar__link main-navbar__link--cta">Contact Us</a>
-                    </li>
-                </ul>
+    <li class="main-navbar__item">
+        <a href="#home" class="main-navbar__link">Home</a>
+    </li>
+
+    <li class="main-navbar__item dropdown">
+        <a href="#services"
+           class="main-navbar__link"
+           id="services-dropdown"
+           role="button"
+           aria-haspopup="true"
+           aria-expanded="false">
+            Services
+        </a>
+
+        <ul class="dropdown-menu" aria-labelledby="services-dropdown">
+            <li><a href="#services">Digital Marketing</a></li>
+            <li><a href="#services">Social Media Management</a></li>
+            <li><a href="#services">Ground Activation</a></li>
+            <li><a href="#services">Custom Software</a></li>
+            <li><a href="#services">Gamified Marketing</a></li>
+            <li><a href="#services">ArbanStream</a></li>
+        </ul>
+    </li>
+
+    <li class="main-navbar__item">
+        <a href="#about" class="main-navbar__link">About Us</a>
+    </li>
+
+    <li class="main-navbar__item">
+        <a href="#events" class="main-navbar__link">Events</a>
+    </li>
+
+    <li class="main-navbar__item">
+        <a href="#contact" class="main-navbar__link">Contact</a>
+    </li>
+
+</ul>
             </nav>
         </div>
     </header>
     
-    <section class="carousel-hero">
+    <section class="carousel-hero" id="home">
         <div class="carousel-hero-container" role="region" aria-roledescription="carousel" aria-label="Featured Projects">
     
             <div class="carousel-track-container">
@@ -86,7 +100,7 @@
                          style="background-image:url('https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?q=80&w=1200')">
                         <div class="slide-content">
                             <h2>MemeyAI Digital Solutions</h2>
-                            <p>BUILD SMARTER. SCALE FASTER. WIN TOGETHER.</p>
+                            <p>We harness the power of technology and creativity to deliver impactful solutions across East Africa and beyond.</p>
                         </div>
                     </div>
                     <!-- Slide 2 -->
@@ -96,8 +110,8 @@
                          aria-label="2 of 3"
                          style="background-image:url('https://images.unsplash.com/photo-1542744095-291d1f67b221?q=80&w=1200')">
                         <div class="slide-content">
-                            <h2>Aura Health: Mobile Wellness App</h2>
-                            <p>An intuitive mobile app designed for tracking fitness and mental wellbeing.</p>
+                            <h2>Transforming Africa Through Technology</h2>
+                            <p>Built in Kenya, for All of Africa</p>
                         </div>
                     </div>
                     <!-- Slide 3 -->
@@ -159,7 +173,7 @@
 
     </section>
        
-       <div class="events">
+       <div class="events" id="events">
         <div class="eveContent">
             <h1>Events</h1>
             <P>We create and manage memorable events that bring people together, inspire meaningful connections and leave a lasting impression. From corporate conferences and product launches to team celebrations and special occasions, our events are carefully planned and professionally executed to reflect your organisation’s goals and brand identity.</P>
@@ -175,7 +189,7 @@
 
        <div class="events">
 
-       <div class="eveContent" id="Services">
+       <div class="eveContent" id="services">
         <h1>Services</h1>
         <P>At MemeyAI, we provide innovative and reliable services designed to help organisations achieve their goals and deliver exceptional experiences. From event planning and management to staff engagement, productions, digital solutions and professional consulting, we combine creativity, technology, and expertise to deliver solutions tailored to each client’s unique needs.</P>
        </div>
@@ -185,7 +199,7 @@
        </div>
 
        <div class="events">
-        <div class="eveContent" id="About">
+        <div class="eveContent" id="about">
             <h1>About</h1>
             <P>MemeyAI is committed to delivering creative, professional and innovative solutions that help organisations connect with their audiences and achieve meaningful results. With a strong focus on quality, creativity, teamwork, and customer satisfaction, we work closely with our clients to understand their needs and turn ideas into impactful experiences.</P>
            </div>
