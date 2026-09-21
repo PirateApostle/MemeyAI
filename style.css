@@ -2305,6 +2305,7 @@ Header / Navigation
     position: relative;
     width: 100%;
     padding: 110px 6%;
+    padding-top: 0%;
     background: #ffffff;
     color: #111827;
     overflow: hidden;
