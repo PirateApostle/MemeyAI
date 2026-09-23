@@ -1656,7 +1656,7 @@ Header / Navigation
 
     padding: 100px 6%;
 
-    padding-top: 0%;
+    padding-top: 5%;
 
     background: #ffffff;
 
@@ -2310,7 +2310,7 @@ Header / Navigation
     position: relative;
     width: 100%;
     padding: 110px 6%;
-    padding-top: 0%                                       ;
+    padding-top: 5%                                       ;
     background: #ffffff;
     color: #111827;
     overflow: hidden;
